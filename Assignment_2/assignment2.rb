@@ -37,8 +37,6 @@ end
 
 
 file = File.open("interaction_networks.txt", "w") # New file to save the results of the networks
-time = Time.now
-file.write "#{time.inspect}\n\n"
 networks = [] # An empty array for save the networks is created
 for n in 0..gene_list.length-1 # A network for any gene of the list will be created
     puts "n=#{n}/#{gene_list.length-1}" # Puts the counter
@@ -150,8 +148,6 @@ for n in 0..gene_list.length-1 # A network for any gene of the list will be crea
         end
     end
 end
-time = Time.now
-file.write "\n\n#{time.inspect}"
 file.close
 
 ### The results of this analysis show interaction networks related to different metabolic pathways 
